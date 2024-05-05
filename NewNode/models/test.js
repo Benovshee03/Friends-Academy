@@ -7,8 +7,7 @@ const testSchema = new mongoose.Schema({
     },
     image: {
         type: String,
-        required: false,
-        default: ''
+        required:false
     },
     category:{
         type: String,

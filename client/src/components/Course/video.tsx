@@ -8,13 +8,13 @@ const Video = () => {
   });
 
   const [relatedVideos, setRelatedVideos] = useState([
-    { id: 1, title: 'Related Video 1', videoUrl: 'https://www.youtube.com/embed/8usc4mqrgqE?si=2gRVIqOI4ezmDQyJ' },
-    { id: 2, title: 'Related Video 2', videoUrl: 'https://www.youtube.com/embed/ab3fiSxLy1U?si=n_xyUCONBJOplOwg' },
-    { id: 3, title: 'Related Video 3', videoUrl: 'https://www.youtube.com/embed/07xiFjxV5tM?si=3Mz7xxTx4ACswNF7' },
-    { id: 4, title: 'Related Video 4', videoUrl: 'https://www.youtube.com/embed/07xiFjxV5tM?si=3Mz7xxTx4ACswNF7' },
-    { id: 5, title: 'Related Video 5', videoUrl: 'https://www.youtube.com/embed/07xiFjxV5tM?si=3Mz7xxTx4ACswNF7' }
+    { id: 1, title: '  To Be ', videoUrl: 'https://www.youtube.com/embed/8usc4mqrgqE?si=2gRVIqOI4ezmDQyJ' },
+    { id: 2, title: ' Vegetables', videoUrl: 'https://www.youtube.com/embed/ab3fiSxLy1U?si=n_xyUCONBJOplOwg' },
+    { id: 3, title: 'Tense Forms', videoUrl: 'https://www.youtube.com/embed/07xiFjxV5tM?si=3Mz7xxTx4ACswNF7' },
+    { id: 4, title: ' Regular', videoUrl: 'https://www.youtube.com/embed/07xiFjxV5tM?si=3Mz7xxTx4ACswNF7' },
+    { id: 5, title: ' Basic daily words', videoUrl: 'https://www.youtube.com/embed/07xiFjxV5tM?si=3Mz7xxTx4ACswNF7' }
     ,
-    { id: 6, title: 'Related Video 6', videoUrl: 'https://www.youtube.com/embed/07xiFjxV5tM?si=3Mz7xxTx4ACswNF7' }
+    { id: 6, title: ' Video 6', videoUrl: 'https://www.youtube.com/embed/07xiFjxV5tM?si=3Mz7xxTx4ACswNF7' }
   ]);
 
   const handleVideoClick = (video : any) => {
@@ -37,7 +37,7 @@ const Video = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
   return (
-    <div className={ responsive ? "container-fluid d-f " : "container-fluid d-f fd-column align-items-center"} style={{height:"80vh"}}>
+    <div className={ responsive ? "container-fluid d-f  justify-content-sb" : "container-fluid d-f fd-column align-items-center"} style={{height:"90vh"}}>
       {/* Ana video */}
       <div className={responsive ? "w-60" : "w-100"}>
         <div className="video-player">
@@ -58,7 +58,7 @@ const Video = () => {
       </div>
 
       {/* İlgili videolar */}
-      <div className={responsive? "w-100 m-2 d-f fd-column" : "w-90 mt-1"} style={{height:"70vh",overflow:"scroll"}}>
+      <div className={responsive? "w-30 m-2 d-f fd-column" : "w-90 mt-1"} style={{height:"70vh",overflow:"scroll"}}>
         <h3>Related Videos</h3>
         <ul className='list-style-none'>
           {relatedVideos.map((video) => (

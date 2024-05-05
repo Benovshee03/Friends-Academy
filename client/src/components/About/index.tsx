@@ -89,7 +89,7 @@ const About = () => {
 
 
       </section>
-      <section className="w-100  d-f align-items-center justify-content-center text-light" style={responsive ? {height:"253px",backgroundColor:"#7D0019"} : {height:"146px",backgroundColor:"#7D0019"}}>
+      {/* <section className="w-100  d-f align-items-center justify-content-center text-light" style={responsive ? {height:"253px",backgroundColor:"#7D0019"} : {height:"146px",backgroundColor:"#7D0019"}}>
         <div className='w-90 d-f align-items-center' style={responsive ? {height:"104px",backgroundColor:"#781527"} : {height:"40px",backgroundColor:"#781527"}} >
           <div className={responsive ? 'd-f m-1 w-30 position-relative ml-5':'d-f m-1 w-30 position-relative ml-5 g-2'} >
             <div className='position-absolute' style={responsive ? {left:"20%",zIndex:"6"} : {right:"-15%",zIndex:"6"}}><img style={responsive ? {} :{width:"56px"}} src={image4} alt="circle" /></div>
@@ -107,8 +107,8 @@ const About = () => {
            </div>
           </div>
         </div>
-      </section>
-      <section className="d-f fd-column align-items-center" style={responsive ? {height:"500px"} : {height:"350px"}}>
+      </section> */}
+      {/* <section className="d-f fd-column align-items-center" style={responsive ? {height:"500px"} : {height:"350px"}}>
         <h3>Meet Our Team</h3>
         <p>
           Our expert team is made up of creatives with technical knowhow, strategists who think outside the box, and developers who push innovation.
@@ -129,7 +129,7 @@ const About = () => {
             </div>
           </div>
         </ul>
-      </section>
+      </section> */}
     </div>
   );
 };

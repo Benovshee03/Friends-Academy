@@ -1,22 +1,22 @@
 ### Create New User
-POST https://localhost:5003/api/auth/register
+POST http://localhost:5003/api/auth/register
 Content-Type: application/json
  
 { 
     "username": "something", 
     "password": "Pro247!!" ,
-    "firstname":"murat",
-    "lastname":"vuranok",
+    "firstname":"murast",
+    "lastname":"vuransok",
     "email":"some@hotmail.com"
 }
  
 
 ### Login
 
-POST https://localhost:5003/api/auth/login
+POST http://localhost:5003/api/auth/login
 Content-Type: application/json
  
 { 
-    "username": "natavan", 
+    "username": "hacimemmedli", 
     "password": "Pro247!!" 
 }  

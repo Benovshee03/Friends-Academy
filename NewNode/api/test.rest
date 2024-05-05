@@ -2,13 +2,16 @@
 
 POST http://localhost:5003/api/tests
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWU1OWY5NWE0NjI5ZDZhZDFhOGQ3MjYiLCJpYXQiOjE3MDk1NDc0MTUsImV4cCI6MTcxMTI3NTQxNX0.CAeSg6MKCPlrnrbCuYPJ4akdnPxKcvqIHxLDtYVJGFc
+Authorization: Bearer "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjJmOGQxNjk4OTcyNTc4ZTQ0YWViMjIiLCJpYXQiOjE3MTQ5NDU0NjcsImV4cCI6MTcxNjY3MzQ2N30.a2hs087K6khQN6bSZT-NVVqpju25CeKqszsmO0UfaqM"
 
 {
-   "categoryId": 1, 
-   "categoryName": "Beverage22s",      
-   "description": "Soft drinks, coffees, teas, beers, and ales" 
-},
+    "question":"How many children are there in computer room?",
+    "category":"7-14",
+    "correctAnswer":"5",
+    "first":"4",
+    "second":"3",
+    "third":"2"
+}
 
 
 ### Bulk Insert
@@ -18,15 +21,25 @@ Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWU1OWY5NWE0NjI5ZDZhZDFhOGQ3MjYiLCJpYXQiOjE3MDk1NDc0MTUsImV4cCI6MTcxMTI3NTQxNX0.CAeSg6MKCPlrnrbCuYPJ4akdnPxKcvqIHxLDtYVJGFc
 
 {
-  "categories": [
-    { "categoryName": "Beverages",      "description": "Soft drinks, coffees, teas, beers, and ales" },
-    { "categoryName": "Condiments",     "description": "Sweet and savory sauces, relishes, spreads, and seasonings" },
-    { "categoryName": "Confections",    "description": "Desserts, candies, and sweet breads" },
-    { "categoryName": "Dairy Products", "description": "Cheeses" },
-    { "categoryName": "Grains/Cereals", "description": "Breads, crackers, pasta, and cereal" },
-    { "categoryName": "Meat/Poultry",   "description": "Prepared meats" },
-    { "categoryName": "Produce",        "description": "Dried fruit and bean curd" },
-    { "categoryName": "Seafood",        "description": "Seaweed and fish" }
+  "courses": [
+    { "courseName": "",     
+     "category": "",
+     "correctAnswer":"",
+     "first":"",
+     "second":"",
+     "third":"" },
+    { "courseName": "",
+         "category": "",
+         "correctAnswer":"",
+         "first":"",
+         "second":"",
+         "third":"" },
+    { "courseName": "Confections",    "category": "Desserts, candies, and sweet breads","correctAnswer":"","first":"","second":"","third":"" },
+    { "courseName": "Dairy Products", "category": "Cheeses","correctAnswer":"","first":"","second":"","third":"" },
+    { "courseName": "Grains/Cereals", "category": "Breads, crackers, pasta, and cereal","correctAnswer":"","first":"","second":"","third":"" },
+    { "courseName": "Meat/Poultry",   "category": "Prepared meats","correctAnswer":"","first":"","second":"","third":"" },
+    { "courseName": "Produce",        "category": "Dried fruit and bean curd","correctAnswer":"","first":"","second":"","third":"" },
+    { "courseName": "Seafood",        "category": "Seaweed and fish","correctAnswer":"","first":"","second":"","third":"" }
   ]
 }
 
@@ -50,5 +63,5 @@ Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWU1YmRlMTUzODkxMzUxMDFiZTA1YjgiLCJpYXQiOjE3MTAxNjMyNDAsImV4cCI6MTcxMTg5MTI0MH0.jM-YYuBsufBb1QwS1RakAhGu2lizf8F-inyqfKVwDmM
 
 {
-   "categoryName": "Bevqerages", "description": "Soft, Tea" 
+   "courseName": "Bevqerages", "category": "Soft, Tea" 
 }

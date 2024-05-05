@@ -19,7 +19,7 @@ router.get('/', async (req, res) => {
 // GET TEST BY ID
 // path: /tests/:1
 
-router.get('/:id', authenticationToken, getTest, async (req, res) => {
+router.get('/:id', getTest, async (req, res) => {
     res.send(res.test);
 });
 
@@ -27,7 +27,7 @@ router.get('/:id', authenticationToken, getTest, async (req, res) => {
 // ADD NEW TEST
 // path: /tests
 
-router.post('/', authenticationToken, async (req, res) => {
+router.post('/', async (req, res) => {
 
     const test = new Test({
         question: req.body.question,
@@ -44,7 +44,7 @@ router.post('/', authenticationToken, async (req, res) => {
 });
 
 // BULK INSERT
-router.post('/bulk-insert', authenticationToken, async (req, res) => {
+router.post('/bulk-insert', async (req, res) => {
     console.log(req.body.tests);
     const tests = req.body.tests.map(cat => ({
         question: cat.question,
@@ -65,7 +65,7 @@ router.post('/bulk-insert', authenticationToken, async (req, res) => {
 
 // UPDATE TEST
 // path: /tests/:id
-router.patch('/:id', authenticationToken, getTest, async (req, res) => {
+router.patch('/:id', getTest, async (req, res) => {
     if (req.req.body.question != null) {
         res.test.question = req.req.body.question;
     }
@@ -101,7 +101,7 @@ router.patch('/:id', authenticationToken, getTest, async (req, res) => {
 
 // DELETE TEST
 // path: /tests/:id
-router.delete('/:id', authenticationToken, getTest, async (req, res) => {
+router.delete('/:id', getTest, async (req, res) => {
     try {
         await res.test.deleteOne();
         res.json(res.test._id)
