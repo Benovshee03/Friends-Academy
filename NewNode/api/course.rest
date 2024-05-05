@@ -1,0 +1,56 @@
+### Create new Course
+
+POST http://localhost:5003/api/courses
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWU1OWY5NWE0NjI5ZDZhZDFhOGQ3MjYiLCJpYXQiOjE3MDk1NDc0MTUsImV4cCI6MTcxMTI3NTQxNX0.CAeSg6MKCPlrnrbCuYPJ4akdnPxKcvqIHxLDtYVJGFc
+
+{
+   "courseName": "English for Kids",      
+   "description": "English for kids between 3-7 ages" ,
+   "level" : "Beginner",
+   "lessonCount":10,
+   "image":"https://nelschool.com/wp-content/uploads/2016/03/corso-inglese-bambini-3anni.jpg"
+}
+
+
+### Bulk Insert
+
+POST http://localhost:5003/api/courses/bulk-insert
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWU1OWY5NWE0NjI5ZDZhZDFhOGQ3MjYiLCJpYXQiOjE3MDk1NDc0MTUsImV4cCI6MTcxMTI3NTQxNX0.CAeSg6MKCPlrnrbCuYPJ4akdnPxKcvqIHxLDtYVJGFc
+
+{
+  "categories": [
+    { "categoryName": "Beverages",      "description": "Soft drinks, coffees, teas, beers, and ales" },
+    { "categoryName": "Condiments",     "description": "Sweet and savory sauces, relishes, spreads, and seasonings" },
+    { "categoryName": "Confections",    "description": "Desserts, candies, and sweet breads" },
+    { "categoryName": "Dairy Products", "description": "Cheeses" },
+    { "categoryName": "Grains/Cereals", "description": "Breads, crackers, pasta, and cereal" },
+    { "categoryName": "Meat/Poultry",   "description": "Prepared meats" },
+    { "categoryName": "Produce",        "description": "Dried fruit and bean curd" },
+    { "categoryName": "Seafood",        "description": "Seaweed and fish" }
+  ]
+}
+
+
+### GET COURSE By Id
+GET http://localhost:5003/courses/65ce1d2877c9c036cefce4d6
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWRmMGM3MzI4YTliM2U2YjNlMTg0NzkiLCJpYXQiOjE3MDkxMjA5MDV9.DyftnbwYqeY_wDAoq8FY6b2-rJj1hQVIlwD-CqSHAwA
+
+
+### GET All COURSES
+GET http://localhost:5004/api/courses
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWU1YmRlMTUzODkxMzUxMDFiZTA1YjgiLCJpYXQiOjE3MTAxNjMyNDAsImV4cCI6MTcxMTg5MTI0MH0.jM-YYuBsufBb1QwS1RakAhGu2lizf8F-inyqfKVwDmM
+
+### DELETE Course By Id
+DELETE http://localhost:5003/courses/65ce1d2877c9c036cefce4d6
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWRmMGM3MzI4YTliM2U2YjNlMTg0NzkiLCJpYXQiOjE3MDkxMjA5MDV9.DyftnbwYqeY_wDAoq8FY6b2-rJj1hQVIlwD-CqSHAwA
+
+### Update Course By Id
+PATCH http://localhost:5003/courses/65ce1d2877c9c036cefce4d6
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWU1YmRlMTUzODkxMzUxMDFiZTA1YjgiLCJpYXQiOjE3MTAxNjMyNDAsImV4cCI6MTcxMTg5MTI0MH0.jM-YYuBsufBb1QwS1RakAhGu2lizf8F-inyqfKVwDmM
+
+{
+   "categoryName": "Bevqerages", "description": "Soft, Tea" 
+}

@@ -87,22 +87,22 @@ console.log(username);
         <div className="menu-overlay"></div>
           <ul className="d-f fd-column">
         <div className="menu-close d-f justify-content-end m-2 text-primary fs-xl"  onClick={closeMenu}>x</div>
-
           <li>
-              <Link to="/" className="  text-dec-none text-secondary ">
+              <Link to="/" className="  text-dec-none text-secondary " onClick={toggleMenu}>
                 Home
               </Link>
             </li>
             <li>
               <Link
                 to="/courses"
-                className=" text-dec-none text-secondary"
+                className=" text-dec-none text-secondary" onClick={toggleMenu}
               >
                 Courses
               </Link>
             </li>
             <li>
               <Link
+              onClick={toggleMenu}
                 to="/contact"
                 className=" text-dec-none text-secondary"
               >
@@ -110,7 +110,7 @@ console.log(username);
               </Link>
             </li>
             <li>
-              <Link to="/about" className=" text-dec-none text-secondary ">
+              <Link to="/about" className=" text-dec-none text-secondary " onClick={toggleMenu}>
                 About Us
               </Link>
             </li>

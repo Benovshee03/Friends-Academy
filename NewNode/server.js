@@ -54,12 +54,11 @@ mongoose
 // seedPermissions(mongoose);
 
 const authRouter = require('./routes/auth');
+const courseRouter = require('./routes/courses');
 const userRouter = require('./routes/users');
 const roleRouter = require('./routes/roles');
 const uploadRouter = require('./routes/uploads');
-const productsRouter = require('./routes/products');
 const userRoleRouter = require('./routes/userRoles');
-const categoriesRouter = require('./routes/categories');
 const permissionRouter = require('./routes/permissions');
 const rolePermissionRouter = require('./routes/rolePermissions');
 
@@ -68,11 +67,10 @@ app.use('/api/auth', authRouter);
 app.use('/api/users', userRouter);
 app.use('/api/roles', roleRouter);
 app.use('/api/uploads', uploadRouter);
-app.use('/api/products', productsRouter);
 app.use('/api/userRoles', userRoleRouter);
-app.use('/api/categories', categoriesRouter);
+app.use('/api/courses', courseRouter);
 app.use('/api/permissions', permissionRouter);
-app.use('/api/rolePermissions', rolePermissionRouter);
+app.use('/api/rolePermissions',rolePermissionRouter);
 
 
 
