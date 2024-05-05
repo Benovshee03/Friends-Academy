@@ -71,7 +71,7 @@ console.log(username);
       <div
         className={
           responsive
-            ? "container d-f"
+            ? "container d-f "
             : "container-sm d-f justify-content-sa "
         }
         style={{

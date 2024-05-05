@@ -12,7 +12,7 @@ interface Question {
 }
 
 const Total = () => {
-  const myUrl = "http://localhost:5003/api/tests";
+  const myUrl = "https://friends-english-academy.onrender.com/api/tests";
 
   const [responsive, setResponsive] = useState(window.innerWidth > 480);
   const [questions, setQuestions] = useState<Question[]>([]);

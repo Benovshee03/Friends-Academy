@@ -12,7 +12,7 @@ import { useNavigate } from "react-router-dom";
   image: string;
 }
 const Courses = () => {
-  const myUrl = "http://localhost:5003/api/courses"
+  const myUrl = "https://friends-english-academy.onrender.com/api/courses"
   const [course, setCourse] = useState<Course[]>([]);
   const getCourse = async () => {
     await axios.get(myUrl)
