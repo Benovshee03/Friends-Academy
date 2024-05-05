@@ -1,14 +1,5 @@
 const mongoose = require('mongoose');
-const courseSchema = new mongoose.Schema({ 
-    // interface Question {
-    //     question: string;
-    //     image: string;
-    //     category: string;
-    //     correctAnswer: string;
-    //     first: string;
-    //     second: string;
-    //     third: string;
-    //   }
+const testSchema = new mongoose.Schema({ 
     question: {
         type: String,   
         required: true, 
@@ -49,6 +40,6 @@ const courseSchema = new mongoose.Schema({
         required: true,
         default: Date.now // oluşturulma tarihi, varsayılan olarak şu anın zamanını alır
     }
-}, { collection: 'Courses' }); // Collection adını burada belirtiyoruz
+}, { collection: 'Tests' }); // Collection adını burada belirtiyoruz
 
-module.exports = mongoose.model('Course', courseSchema);
+module.exports = mongoose.model('Test', testSchema);
