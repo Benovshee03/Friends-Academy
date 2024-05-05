@@ -5,12 +5,12 @@ Content-Type: application/json
 Authorization: Bearer "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjJmOGQxNjk4OTcyNTc4ZTQ0YWViMjIiLCJpYXQiOjE3MTQ5NDU0NjcsImV4cCI6MTcxNjY3MzQ2N30.a2hs087K6khQN6bSZT-NVVqpju25CeKqszsmO0UfaqM"
 
 {
-    "question":"How many children are there in computer room?",
+    "question":"Where are the children?",
     "category":"7-14",
-    "correctAnswer":"5",
-    "first":"4",
-    "second":"3",
-    "third":"2"
+    "correctAnswer":"classroom",
+    "first":"bedroom",
+    "second":"living room",
+    "third":"kitchen"
 }
 
 
