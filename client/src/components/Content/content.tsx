@@ -11,12 +11,12 @@ import img1 from "../../images/Rectangle.png";
 import img2 from "../../images/img.png";
 import img3 from "../../images/image 12.png";
 import img4 from "../../images/image 231.png";
-import img10 from "../../images/10.png";
 import lesson from "../../images/v6-icon (free).svg";
 import level from "../../images/icon.svg";
 import arrow from "../../images/keyboard_arrow_right.svg";
 import arrowPri from "../../images/arrowPrimary.png"
 import { useNavigate } from "react-router-dom";
+import star from "../../images/Star 22.png"
 import axios from "axios";
 function Content() {
   interface Course {
@@ -36,7 +36,7 @@ function Content() {
   function toAbout(){
     navigate("/about")
   }
-  const myUrl = "http://localhost:5003/api/courses"
+  const myUrl = "https://friends-english-academy.onrender.com/api/courses"
   const [course, setCourse] = useState<Course[]>([]);
   const getCourse = async () => {
     await axios.get(myUrl)
@@ -50,13 +50,6 @@ function Content() {
     });
   };
   const [responsive, setResponsive] = useState(window.innerWidth > 480);
-  useEffect(() => {
-    function handleResize() {
-      setResponsive(window.innerWidth <= 480);
-    }
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
   useEffect(() => {
     getCourse()
     function handleResize() {
@@ -105,15 +98,15 @@ function Content() {
             </button>
           </div>
           <div className="d-f justify-content-sb fs-md">
-            <div>stars</div>
+            <div><img src={star} alt="star" /><img src={star} alt="star" /><img src={star} alt="star" /><img src={star} alt="star" /><img src={star} alt="star" /></div>
             <div>15K+ Students Love learning with us</div>
           </div>
         </div>
         <div>
           {responsive ? (
-            <img src={Rafiki} alt="first page image" />
+            <img src={Rafiki} alt="first page " />
           ) : (
-            <img src={mobileFirst} alt="first page image" />
+            <img src={mobileFirst} alt="first page " />
           )}
         </div>
         <div
@@ -222,7 +215,7 @@ function Content() {
               <img
                 src={img1}
                 className={responsive ? "img" : "responsImage"}
-                alt="font image"
+                alt="font "
               />
               <div>
                 <div
@@ -309,7 +302,7 @@ function Content() {
           <div>
             <img
               src={img3}
-              alt="font image"
+              alt="font "
               className={responsive ? "img" : "responsImage"}
             />
           </div>
@@ -336,10 +329,7 @@ function Content() {
           Popular Courses
         </div>
         {course && course.slice(1,4).map((e)=>{
-                {console.log(e)}
-
           return(
-              
             <div
             style={{ width: "392px",height:"426px" , border:"1px solid #BDBDBD" ,borderRadius:"8px" }}
             className={
@@ -442,12 +432,12 @@ function Content() {
             them say.....{" "}
           </div>
         </div>
-        <div className="d-f justify-content-sb d-sm-none">
+        <div className="d-f justify-content-sb d-sm-none mt-4">
           <div
             style={{ width: "32%", height: "280px" }}
             className="bg-light d-f fd-column align-items-center justify-content-center"
           >
-            <div>stars</div>
+            <div><img src={star} alt="star"/><img src={star} alt="star"/><img src={star} alt="star"/><img src={star} alt="star"/><img src={star} alt="star"/></div>
             <div className="fs-md" style={{ width: "80%" }}>
               "I just had a an honest to god conversation in French with a
               friend in Quebec! I stumbled a bit, but we only used a translator
@@ -461,7 +451,7 @@ function Content() {
             style={{ width: "32%", height: "280px" }}
             className="bg-light d-f fd-column align-items-center justify-content-center"
           >
-            <div>stars</div>
+            <div><img src={star} alt="star"/><img src={star} alt="star"/><img src={star} alt="star"/><img src={star} alt="star"/><img src={star} alt="star"/></div>
             <div className="fs-md" style={{ width: "80%" }}>
               "I just had a an honest to god conversation in French with a
               friend in Quebec! I stumbled a bit, but we only used a translator
@@ -475,7 +465,7 @@ function Content() {
             style={{ width: "32%", height: "280px" }}
             className="bg-light d-f fd-column align-items-center justify-content-center"
           >
-            <div>stars</div>
+            <div><img src={star} alt="star"/><img src={star} alt="star"/><img src={star} alt="star"/><img src={star} alt="star"/><img src={star} alt="star"/></div>
             <div className="fs-md" style={{ width: "80%" }}>
               "I just had a an honest to god conversation in French with a
               friend in Quebec! I stumbled a bit, but we only used a translator
@@ -491,7 +481,7 @@ function Content() {
             style={{ width: "48%", height: "auto" }}
             className="bg-light d-f fd-column align-items-center justify-content-center"
           >
-            <div>stars</div>
+            <div><img src={star} alt="star"/><img src={star} alt="star"/><img src={star} alt="star"/><img src={star} alt="star"/><img src={star} alt="star"/></div>
             <div className="fs-sm" style={{ width: "80%" }}>
               "I just had a an honest to god conversation in French with a
               friend in Quebec! I stumbled a bit, but we only used a translator
@@ -505,7 +495,7 @@ function Content() {
             style={{ width: "48%", height: "auto" }}
             className="bg-light d-f fd-column align-items-center justify-content-center"
           >
-            <div>stars</div>
+            <div><img src={star} alt="star"/><img src={star} alt="star"/><img src={star} alt="star"/><img src={star} alt="star"/><img src={star} alt="star"/></div>
             <div className="fs-sm" style={{ width: "80%" }}>
               "I just had a an honest to god conversation in French with a
               friend in Quebec! I stumbled a bit, but we only used a translator

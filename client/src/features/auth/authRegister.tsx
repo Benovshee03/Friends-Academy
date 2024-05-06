@@ -13,7 +13,7 @@ const AuthRegister: React.FC = () => {
     dispatch(authRegister(values));
     navigate("/");
   };
-
+  
   return (
     <Card>
       <Row style={{ marginTop: 16 }}>
