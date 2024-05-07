@@ -1,5 +1,5 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { LoginModel, LoginState } from "./types";
+import { LoginModel, LoginState, RegisterModel } from "./types";
 import http from "../../common/utils/api";
 import createBaseSlice from "../../network/reducers/core/BaseSlice";
 
@@ -20,7 +20,7 @@ export const authLogin = createAsyncThunk(
     return response.data;
   }
 );
-export const authRegister = createAsyncThunk("auth/register", async (model: LoginModel) => {
+export const authRegister = createAsyncThunk("auth/register", async (model: RegisterModel) => {
   const response = await http.post("/auth/register", model);
   return response.data;
 });

@@ -1,12 +1,17 @@
 import React, { useState,useEffect } from 'react';
-
+import { useAppSelector } from '../../app/hooks';
+import { removeStore, setStore } from '../../common/utils/localStorageHelper';
+import { useNavigate } from "react-router-dom";
 const Video = () => {
+  const navigate = useNavigate();
   const [mainVideo, setMainVideo] = useState({
     title: 'Main Video Title',
     description: 'Main Video Description',
     videoUrl: 'https://www.youtube.com/embed/8usc4mqrgqE?si=2gRVIqOI4ezmDQyJ'
   });
-
+  function onClickToLogin() {
+    navigate("/");
+  }
   const [relatedVideos, setRelatedVideos] = useState([
     { id: 1, title: '  To Be ', videoUrl: 'https://www.youtube.com/embed/8usc4mqrgqE?si=2gRVIqOI4ezmDQyJ' },
     { id: 2, title: ' Vegetables', videoUrl: 'https://www.youtube.com/embed/ab3fiSxLy1U?si=n_xyUCONBJOplOwg' },
@@ -16,7 +21,18 @@ const Video = () => {
     ,
     { id: 6, title: ' Video 6', videoUrl: 'https://www.youtube.com/embed/07xiFjxV5tM?si=3Mz7xxTx4ACswNF7' }
   ]);
-
+  const result = useAppSelector((state) => state.auth.result);
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
+  useEffect(() => {
+    if (result.status === "succeeded") {
+      setStore("token", result.token);
+      setIsLoggedIn(false);
+    } else {
+      removeStore("token");
+      setIsLoggedIn(true);
+      navigate("/admin/login")
+    }
+  }, [result]);
   const handleVideoClick = (video : any) => {
     setMainVideo(video);
   };
@@ -38,7 +54,6 @@ const Video = () => {
   }, []);
   return (
     <div className={ responsive ? "container-fluid d-f  justify-content-sb" : "container-fluid d-f fd-column align-items-center"} style={{height:"90vh"}}>
-      {/* Ana video */}
       <div className={responsive ? "w-60" : "w-100"}>
         <div className="video-player">
           <iframe
@@ -57,7 +72,6 @@ const Video = () => {
         </div>
       </div>
 
-      {/* İlgili videolar */}
       <div className={responsive? "w-30 m-2 d-f fd-column" : "w-90 mt-1"} style={{height:"70vh",overflow:"scroll"}}>
         <h3>Related Videos</h3>
         <ul className='list-style-none'>

@@ -92,13 +92,14 @@ const Register: React.FC<RegisterProps> = ({ onFinish, isEdit }) => {
         }}
         className={
           responsive
-            ? "log d-f justify-content-center align-items-center "
+            ? "log d-f justify-content-center align-items-center w-50"
             : "mobLogin d-f justify-content-center align-items-center"
         }
       >
         <Form
           form={form}
           onFinish={handleSubmit}
+          style={{ width: "339px" }}
           className={
             responsive ? "d-f fd-column w-100 g-2  " : "d-f fd-column w-100"
           }

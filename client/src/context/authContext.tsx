@@ -48,6 +48,8 @@ const [isLoggedIn, setIsLoggedIn] = useState(false);
   ): Promise<void> => {
     try {
       // Encrypt password if needed
+      console.log(username);
+      
       await dispatch(
         authRegister({ username, firstname, lastname, email, password } as RegisterModel)
       ).unwrap();
@@ -56,6 +58,6 @@ const [isLoggedIn, setIsLoggedIn] = useState(false);
     }
   };
 
-  const value = {loginAuth, logoutAuth, registerAuth,isLoggedIn };
+  const value = {loginAuth, logoutAuth, registerAuth , isLoggedIn };
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 };

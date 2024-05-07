@@ -17,22 +17,22 @@ const io = new Server(server, {
 
 
 io.on('connection', (socket) => {
-    console.log('Bir kullanıcı bağlandı.');
+    console.log('User connect');
 
     socket.on('addCategory', (newCategory) => {
-        console.log('Yeni kategori eklendi:', newCategory);
+        console.log('New Category Added', newCategory);
         io.emit('categoryAdded', newCategory);
     });
 
 
     socket.on('notification', (notification) => {
-        console.log('Yeni bildirim:', notification); // db ye kaydedilebilir + mail gönderin, sms gönderin, push notification gönderin
+        console.log('New Notification:', notification); // db ye kaydedilebilir + mail gönderin, sms gönderin, push notification gönderin
         io.emit('notification', notification);
     });
 
 
     socket.on('disconnect', () => {
-        console.log('Bir kullanıcı bağlantıyı kesti.');
+        console.log('User is disconnected');
     });
 });
 

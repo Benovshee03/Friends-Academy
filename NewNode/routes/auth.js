@@ -22,7 +22,7 @@ router.post('/login', async (req, res) => {
         }
 
         const tokenOptions = {
-            expiresIn: '20d', // s saniye, m dakika, h saat, d gün
+            expiresIn: '40d', // s saniye, m dakika, h saat, d gün
             // notBefore: '15s', // 15 saniye sonra başlar
             // audience: 'http://localhost:3000', // token hangi sunucuda kullanılacak
             // issuer: 'http://localhost:5001', // token kimin tarafından veriliyor
